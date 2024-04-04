@@ -1,4 +1,4 @@
-package 백준.실버3;
+package 문제.실버3;
 
 import java.io.*;
 import java.util.StringTokenizer;

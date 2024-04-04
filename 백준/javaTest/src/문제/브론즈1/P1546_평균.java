@@ -1,4 +1,4 @@
-package 백준.브론즈1;
+package 문제.브론즈1;
 
 import java.util.Scanner;
 
