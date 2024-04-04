@@ -1,5 +1,3 @@
-package 문제.실버1;
-
 /*
  * 1. 배열크기 N과 질의개수 M을 입력 받는다.
  * 2. 배열 값을 입력받는다.
@@ -9,11 +7,16 @@ package 문제.실버1;
  * 공식 산출에 어려움이 있음... 그냥 외워야되나..
  * 1차원 배열 공식과 크게 다를게 없긴 함
  */
-import java.io.*;
-import java.util.*;
+
+package 문제.실버1;
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class P11660_구간합 {
-  public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException {
     BufferedReader rb = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(rb.readLine());
 
@@ -45,7 +48,5 @@ public class P11660_구간합 {
       long result = S[x2][y2] - S[x2][y1 - 1] - S[x1 - 1][y2] + S[x1 - 1][y1 - 1];
       System.out.println(result);
     }
-
-
   }
 }
