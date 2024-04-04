@@ -1,7 +1,6 @@
 import java.util.*;
 class Solution {
     public int[] solution(int[] arr, boolean[] flag) {
-        int[] answer = {};
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < flag.length; i++) {
             if (flag[i]) {
