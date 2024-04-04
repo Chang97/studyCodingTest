@@ -1,0 +1,49 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P1546_평균",
+      "request": "launch",
+      "mainClass": "문제.브론즈1.P1546_평균",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P11720_숫자의합",
+      "request": "launch",
+      "mainClass": "문제.브론즈2.P11720_숫자의합",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P11660_구간합",
+      "request": "launch",
+      "mainClass": "문제.실버1.P11660_구간합",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P11659_구간합",
+      "request": "launch",
+      "mainClass": "문제.실버3.P11659_구간합",
+      "projectName": "javaTest_4ee982c1"
+    }
+  ]
+}
