@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "P11660_구간합",
+      "request": "launch",
+      "mainClass": "문제.실버1.P11660_구간합",
+      "projectName": "javaTest_57298374"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"
