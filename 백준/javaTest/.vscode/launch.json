@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "P12891_DNA비밀번호",
+      "request": "launch",
+      "mainClass": "문제.실버5.P12891_DNA비밀번호",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P1253_좋다",
+      "request": "launch",
+      "mainClass": "문제.골드4.P1253_좋다",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P1940_주몽의명령",
+      "request": "launch",
+      "mainClass": "문제.실버4.P1940_주몽의명령",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P2018_연속된자연수합",
+      "request": "launch",
+      "mainClass": "문제.실버5.P2018_연속된자연수합",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
+      "name": "P10986_나머지합",
+      "request": "launch",
+      "mainClass": "문제.골드3.P10986_나머지합",
+      "projectName": "javaTest_4ee982c1"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "Main",
