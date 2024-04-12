@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "P11003_최솟값찾기",
+      "request": "launch",
+      "mainClass": "문제.플래티넘.P11003_최솟값찾기",
+      "projectName": "javaTest_57298374"
+    },
+    {
+      "type": "java",
       "name": "P12891_DNA비밀번호",
       "request": "launch",
       "mainClass": "문제.실버5.P12891_DNA비밀번호",
