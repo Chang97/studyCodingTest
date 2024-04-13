@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "P1874_스택수열",
+      "request": "launch",
+      "mainClass": "문제.실버3.P1874_스택수열",
+      "projectName": "javaTest_57298374"
+    },
+    {
+      "type": "java",
       "name": "P11003_최솟값찾기",
       "request": "launch",
       "mainClass": "문제.플래티넘.P11003_최솟값찾기",
