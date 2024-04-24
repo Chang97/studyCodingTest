@@ -39,6 +39,7 @@ public class P1167_트리의지름 {
     BFS(Max); 
     Arrays.sort(distance);
     System.out.println(distance[N]);
+    sc.close();
   }
   private static void BFS(int index) {
     Queue<Integer> queue = new LinkedList<Integer>();
