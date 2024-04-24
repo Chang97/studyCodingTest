@@ -37,5 +37,6 @@ public class P1920_원하는정수찾기 {
         System.out.println("0");
       }
     }
+    sc.close();
   }
 }

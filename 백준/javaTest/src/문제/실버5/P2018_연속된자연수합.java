@@ -39,5 +39,6 @@ public class P2018_연속된자연수합 {
     }
 
     System.out.println(count);
+    sc.close();
   }
 }

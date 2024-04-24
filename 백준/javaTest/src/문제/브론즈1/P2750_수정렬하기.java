@@ -27,5 +27,6 @@ public class P2750_수정렬하기 {
     for (int i = 0; i < N; i++) {
       System.out.println(arr[i]);
     }
+    sc.close();
   }
 }

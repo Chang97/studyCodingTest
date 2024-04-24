@@ -29,5 +29,6 @@ public class P1427_내림차순정렬 {
     for (int i = 0; i <str.length(); i++) {
       System.out.print(A[i]);
     }
+    sc.close();
   }
 }

@@ -13,6 +13,7 @@ public class P2023_신기한소수 {
     DFS(3, 1);
     DFS(5, 1);
     DFS(7, 1);
+    sc.close();
   }
 
   static void DFS(int number, int jarisu) {

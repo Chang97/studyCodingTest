@@ -39,5 +39,6 @@ public class P1874_스택수열 {
       }
     }
     if (result) System.out.println(sb.toString());
+    sc.close();
   }
 }

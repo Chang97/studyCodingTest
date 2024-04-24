@@ -4,6 +4,7 @@ import java.util.*;
 public class P1260_DFS와BFS {
   static boolean visited[];
   static ArrayList<Integer>[] A;
+  @SuppressWarnings("unchecked")
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     int N = scan.nextInt(); // 노드 개수
@@ -30,6 +31,7 @@ public class P1260_DFS와BFS {
     visited = new boolean[N + 1];
     BFS(Start);
     System.out.println();
+    scan.close();
   }
 
   public static void DFS(int Node) {

@@ -17,6 +17,7 @@ public class P2164_카드 {
     }
 
     System.out.println(queue.poll());
+    sc.close();
   }
   
 }

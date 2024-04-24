@@ -27,5 +27,6 @@ public class P1546_평균 {
       sum += score[i];
     }
     System.out.println(sum / max * 100 / cnt);
+    sc.close();
   }
 }

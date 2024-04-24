@@ -5,6 +5,7 @@ public class P13023_친구관계파악하기 {
   static boolean visited[];
   static ArrayList<Integer>[] A;
   static boolean arrive;
+  @SuppressWarnings("unchecked")
   public static void main (String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -31,6 +32,7 @@ public class P13023_친구관계파악하기 {
     }
     if (arrive) System.out.println("1");
     else System.out.println("0"); // 5의 깊이가 없다면 0 출력
+    sc.close();
   }
 
   public static void DFS (int now, int depth) {

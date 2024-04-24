@@ -6,6 +6,7 @@ public class P1167_트리의지름 {
   static boolean visited[];
   static int[] distance;
   static ArrayList<Edge>[] A;
+  @SuppressWarnings("unchecked")
   public static void main (String[] args) {
     Scanner sc = new Scanner(System.in);
     int N = sc.nextInt(); // 노드 개수

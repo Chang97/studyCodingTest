@@ -17,13 +17,13 @@ public class P11720_숫자의합 {
 
     String num = sc.next();
 
-    char[] arr = num.toCharArray();
-
     int sum = 0;
-    for (char n : arr) {
-      sum += n - '0';
+    for (int i = 0; i < N; i++) {
+      sum += num.charAt(i) - '0';
     }
+
     System.out.println(sum);
+    sc.close();
   }
   
 }

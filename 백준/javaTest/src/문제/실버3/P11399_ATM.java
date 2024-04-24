@@ -42,5 +42,6 @@ public class P11399_ATM {
     }
 
     System.out.println(sum);
+    sc.close();
   }
 }
