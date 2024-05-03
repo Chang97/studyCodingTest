@@ -1,8 +1,7 @@
-// 개발중
 class Solution {
     public int solution(int[] nums) {
         int[] arr = new int[3001];
-        int answer = -1;
+        int answer = 0;
         
         for (int i = 2; i < arr.length; i++) {
             arr[i] = i;
