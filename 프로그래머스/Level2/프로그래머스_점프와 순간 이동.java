@@ -1,6 +1,5 @@
-import java.util.*;
 
-public class Solution {
+class Solution {
     public int solution(int n) {
         int ans = 0;
         while (0 < n) {
