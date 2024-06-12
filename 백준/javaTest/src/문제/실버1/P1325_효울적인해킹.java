@@ -4,62 +4,64 @@ import java.io.*;
 import java.util.*;
 
 public class P1325_효울적인해킹 {
-  static int N, M;
-  static boolean visited[];
-  static int answer[];
-  static ArrayList<Integer>[] A;
+    static int N, M;
+    static ArrayList<Integer>[] reverseGraph;
+    static boolean[] visited;
+    static int[] hackCount;
 
-  public static void BFS(int index) {
-    Queue<Integer> queue = new LinkedList<Integer>();
-    queue.add(index);
-    visited[index] = true;
-
-    while(!queue.isEmpty()) {
-      int now_node = queue.poll();
-      for (int i : A[now_node]) {
-        if (!visited[i]) {
-          visited[i] = true;
-          answer[i]++;
-          queue.add(i);
+    // BFS를 사용하여 역방향 그래프 탐색
+    public static int bfs(int startNode) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(startNode);
+        visited[startNode] = true;
+        int count = 1;
+        
+        while (!queue.isEmpty()) {
+            int current = queue.poll();
+            for (int next : reverseGraph[current]) {
+                if (!visited[next]) {
+                    visited[next] = true;
+                    queue.add(next);
+                    count++;
+                }
+            }
         }
-      }
-    }
-  }
-  
-  public static void main(String[] args) throws IOException {
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    StringTokenizer st = new StringTokenizer(br.readLine());
-    N = Integer.parseInt(st.nextToken());
-    M = Integer.parseInt(st.nextToken());
-    A = new ArrayList[N + 1];
-    answer = new int[N + 1];
-    for (int i = 1; i <= N; i++) {
-      A[i] = new ArrayList<>();
+        return count;
     }
 
-    for (int i = 0; i < M; i++) {
-      st = new StringTokenizer(br.readLine());
-      int S = Integer.parseInt(st.nextToken());
-      int E = Integer.parseInt(st.nextToken());
-      A[S].add(E);
-    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
 
-    for (int i = 1; i <= N; i++) {
-      visited = new boolean[N + 1];
-      BFS(i);
-    }
+        reverseGraph = new ArrayList[N + 1];
+        for (int i = 1; i <= N; i++) {
+            reverseGraph[i] = new ArrayList<>();
+        }
 
-    int maxVal = 0;
-    for (int i = 1; i <= N; i++) {
-      maxVal = Math.max(maxVal, answer[i]);
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
+            reverseGraph[B].add(A); // 역방향으로 그래프를 저장
+        }
+
+        hackCount = new int[N + 1];
+        int maxHack = 0;
+
+        for (int i = 1; i <= N; i++) {
+            visited = new boolean[N + 1];
+            hackCount[i] = bfs(i);
+            maxHack = Math.max(maxHack, hackCount[i]);
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 1; i <= N; i++) {
+            if (hackCount[i] == maxHack) {
+                result.append(i).append(" ");
+            }
+        }
+        System.out.println(result.toString().trim());
     }
-    for (int i = 1; i <= N; i++) {
-      if (answer[i] == maxVal) {
-        // System.out.print(i + " ");
-        bw.write(i + " ");
-      }
-    }
-    bw.flush();
-  }
 }
