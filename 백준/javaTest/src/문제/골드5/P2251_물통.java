@@ -24,6 +24,7 @@ public class P2251_물통 {
     for (int i = 0; i < answer.length; i++) {
       if (answer[i]) System.out.print(i + " ");
     }
+    sc.close();
   }
 
   public static void BFS() {

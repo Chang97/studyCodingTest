@@ -5,6 +5,7 @@ import java.util.*;
 
 public class P1854_K번째최단경로찾기 {
   static final int INF = 100000000;
+  @SuppressWarnings("unchecked")
   public static void main(String[] args) throws IOException {
     int N, M, K;
     int[][] W = new int[1001][1001];

@@ -10,6 +10,7 @@ public class P1707_이분그래프 {
   static int[] check; // 이분그래프 체크 배열
   static boolean[] visited; // 방문기록 저장 배열
   static boolean IsEven;
+  @SuppressWarnings("unchecked")
   public static void main (String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int N =  Integer.parseInt(br.readLine()); // 테스트 케이스 개수
