@@ -1,18 +1,8 @@
 package 문제.골드5;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
-/**
- * P1916_최소비용구하기
- */
 public class P1916_최소비용구하기 {
 
   static int N, M;
@@ -87,6 +77,6 @@ class Node implements Comparable<Node> {
 
   @Override
   public int compareTo(Node o) {
-    return value = o.value;
+    return value - o.value;
   }
 }
