@@ -7,6 +7,7 @@ public class P18352_특정거리도시찾기 {
   static ArrayList<Integer>[] A;
   static int N,M,K,X;
   static List<Integer> answer;
+  @SuppressWarnings("unchecked")
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     N = sc.nextInt();
@@ -47,6 +48,7 @@ public class P18352_특정거리도시찾기 {
         System.out.println(temp);
       }
     }
+    sc.close();
   }
 
   public static void BFS(int Node) {
