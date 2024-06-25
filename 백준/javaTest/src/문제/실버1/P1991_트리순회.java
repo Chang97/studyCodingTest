@@ -32,6 +32,8 @@ public class P1991_트리순회 {
     inOrder(0);
     System.out.println();
     postOrder(0);
+
+    sc.close();
   }
 
   public static void preOrder(int now) {
