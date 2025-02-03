@@ -41,9 +41,7 @@ public class P11399 {
           arr[j] = temp;
         }
       }
-    }
-    // 1 2 3 3 4    1 3 6 9 13 14
-                    
+    }                    
     int[] result = new int[N];
     result[0] = arr[0];
     int sum = result[0];
