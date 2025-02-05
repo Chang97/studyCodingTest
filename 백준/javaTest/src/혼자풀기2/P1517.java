@@ -20,6 +20,10 @@ public class P1517 {
       첫째 줄에 Swap 횟수를 출력한다
      * 
      */
+    /*
+     * 풀이
+     * 버블정렬 스왑 횟수는 병합정렬에서 오름차순기준 우측 데이터가 좌측으로 이동하는 칸 수와 동일
+     */
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     int N = Integer.parseInt(br.readLine());
