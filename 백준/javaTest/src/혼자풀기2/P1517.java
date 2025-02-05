@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class P1517 {
-  static int[] sorted;
-  static int result;
+  static long[] sorted;
+  static long result;
   public static void main(String[] args) throws IOException {
     /*
       문제
@@ -23,14 +23,14 @@ public class P1517 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     int N = Integer.parseInt(br.readLine());
-    int[] arr = new int[N];
-    sorted = new int[N];
+    long[] arr = new long[N];
+    sorted = new long[N];
     result = 0;
     StringTokenizer st = new StringTokenizer(br.readLine());
 
 
     for (int i = 0; i < N; i++) {
-      arr[i] = Integer.parseInt(st.nextToken());
+      arr[i] = Long.parseLong(st.nextToken());
     }
 
     mergeSort(arr, 0, N - 1);
@@ -39,7 +39,7 @@ public class P1517 {
 
   }
 
-  static void mergeSort(int[] arr, int start, int end) {
+  static void mergeSort(long[] arr, int start, int end) {
     if (start >= end) return;
     int mid = (start + end) / 2;
 
@@ -49,7 +49,7 @@ public class P1517 {
     merge(arr, start, mid, end);
   }
 
-  static void merge(int[] arr, int start, int mid, int end) {
+  static void merge(long[] arr, int start, int mid, int end) {
     int l = start;
     int r = mid + 1;
     int idx = start;
