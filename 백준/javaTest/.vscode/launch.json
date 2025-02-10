@@ -6,6 +6,62 @@
   "configurations": [
     {
       "type": "java",
+      "name": "P1253",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P1253",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P1940",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P1940",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P2018",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P2018",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P10986",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P10986",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P11660",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P11660",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P11659",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P11659",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P1546",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P1546",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
+      "name": "P11720",
+      "request": "launch",
+      "mainClass": "혼자풀기2.P11720",
+      "projectName": "javaTest_f8e5624d"
+    },
+    {
+      "type": "java",
       "name": "P1874_스택수열",
       "request": "launch",
       "mainClass": "문제.실버3.P1874_스택수열",
