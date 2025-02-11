@@ -16,36 +16,43 @@ public class P11724 {
     첫째 줄에 연결 요소의 개수를 출력한다.
    */
   /*
-   * DFS(깊이우선 탐색)를 이용해서 풀이 */
+   * DFS(깊이우선 탐색)를 이용해서 풀이 
+   * 1. 필요한 변수 세팅 (연결리스트, 방문여부 판별 배열)
+   * 2. 시작점을 지정한 후 탐색 시작
+   * 3. 끝까지 이동했으면 다음 시작점 찾기 (미방문)
+   * 4. 모두 다 방문 끝났으면 끝
+   * */
   public static void main(String[] args) throws IOException{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(br.readLine());
+
     int N = Integer.parseInt(st.nextToken());
     int M = Integer.parseInt(st.nextToken());
     List<Integer>[] arr = new ArrayList[N + 1];
     boolean[] visited = new boolean[N + 1];
+    int result = 0;
 
-    for (int i = 1; i <= N; i++) {
+    // 연결리스트 초기화
+    for (int i = 1; i <= N; i++) { 
       arr[i] = new ArrayList<>();
     }
 
-    
     for (int i = 1; i <= M; i++) {
       st = new StringTokenizer(br.readLine());
       int u = Integer.parseInt(st.nextToken());
       int v = Integer.parseInt(st.nextToken());
-      
       arr[u].add(v);
       arr[v].add(u);
     }
-    int count = 0;
+
     for (int i = 1; i <= N; i++) {
       if (!visited[i]) {
-        count++;
+        result++;
         DFS(i, visited, arr);
       }
     }
-    System.out.println(count);
+
+    System.out.println(result);
 
   }
 
@@ -54,9 +61,9 @@ public class P11724 {
       return;
     }
     visited[v] = true;
-    for (int i : arr[v]) {
-      if (visited[i] == false) {
-        DFS(i, visited, arr);
+    for (int i = 0; i < arr[v].size(); i++) {
+      if (!visited[arr[v].get(i)]) {
+        DFS(arr[v].get(i), visited, arr);
       }
     }
   }
