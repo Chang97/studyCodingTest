@@ -22,41 +22,28 @@ public class P2023 {
    */
   /*
    * 풀이
-   * DFS 개념을 활요하여 푼다.
-   * 각 자리수별로 모두 소수인 수를 찾아야함
-   * 현재 자리수가 소수인 경우를 찾아서 자리수를 늘려가며 입력받은 N자리수가 될때까지 탐색
+   * 1. DFS 개념을 활용해서 풀이
+   * 2. 입력받은 N기준으로 N의자리수 숫자중 신기한 소소를찾아야함.
+   * 3. 왼쪽부터 자릿수를 하나씩 늘려가며 소수여야하니 1의 자리일 때 소수인 2,3,5,7 기준으로 DFS탐색
+   *    - 탐색은 연결리스트를 사용하지 않지만 개념은 가져간다.
+   *    - 현재 입력받은 자리수가 N과 동일하며 판별할 숫자가 소수인 경우 해당 숫자를 출력한다.
+   *    - 그게 아닌경우는 입력받은 숫자 자리수 하나 올린 후 1~9까지 넣어가며 소수인지 판별
+   *    - 만약 소수인 경우에는 자리수를 하나 올려서 해당 숫자를 DFS 호출 (재귀)
    * 
+   * ** 잘못 생각한 부분, 소수 판별을 위해 에라토스테네스의 체를 사용하려 헀으나
+   *    메모리 초과로 일반적인 소수판별로직을 사용했음. (메모리 제한 4MB,  int[] 크기가 100000000인 경우 100MB)
    */
   static int N;
   static int[] prime;
-  
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     N = Integer.parseInt(br.readLine());
-    StringBuffer sb = new StringBuffer();
-    for (int i = 0; i < N; i++) {
-      sb.append("9");
-    }
-    prime = new int[Integer.parseInt(sb.toString()) + 1];
-
-    // 소수판별을 위한 에라토스테네스의 체
-    for (int i = 1; i < prime.length; i++) {
-      prime[i] = i;
-    }
-
-    for (int i = 2; i < prime.length; i++) {
-      if (prime[i] == 0) continue;
-      
-      for (int j = 2 * i; j < prime.length; j += i) {
-        prime[j] = 0;
-      }
-    }
-
 
     DFS(2, 1);
     DFS(3, 1);
     DFS(5, 1);
     DFS(7, 1);
+
 
   }
 
@@ -64,8 +51,8 @@ public class P2023 {
     if (jarisu == N) {
       if (isPrime(num)) {
         System.out.println(num);
-        return;
       }
+      return;
     }
 
     for (int i = 1; i <= 9; i++) {
@@ -76,7 +63,12 @@ public class P2023 {
     }
   }
 
-  static boolean isPrime(int num) {
-    return prime[num] != 0;
+  static boolean isPrime (int num) {
+    for (int i = 2; i < num; i++) {
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return true;
   }
 }
