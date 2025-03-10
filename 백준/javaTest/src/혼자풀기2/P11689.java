@@ -10,9 +10,9 @@ public class P11689 {
         long n = Long.parseLong(br.readLine());
         long result = n;
         for (long i = 2; i <= Math.sqrt(n); i++) { // 제곱근까지 진행
-            if (n % i == 0) { // p가 소수인지 확인
-                result = result - result / i; // 결과값 업데이트
-                while (n % i == 0) { 
+            if (n % i == 0) { // i가 소인수인지 확인
+                result = result - result / i; // result값 업데이트
+                while (n % i == 0) { // 소인수 나누기 연산으로 삭제
                     n /= i;
                 }
             }
@@ -24,6 +24,5 @@ public class P11689 {
         bw.write(String.valueOf(result));
         bw.flush();
         bw.close();
-
     }
 }
