@@ -11,15 +11,13 @@ public class P1934 {
             st = new StringTokenizer(br.readLine());
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
-            int result = A * B;
-            while (A > 0 && B > 0) {
-                if (A >= B) {
-                    A = A % B;
-                } else {
-                    B = B % A;
-                }
-            }
-            System.out.println(result / Math.max(A, B));
+            int result = A * B / gcd(A, B);
+            System.out.println(result);
         }
+    }
+
+    static int gcd(int a, int b) {
+        if (b == 0) return a;
+        else return gcd(b, a % b);
     }
 }

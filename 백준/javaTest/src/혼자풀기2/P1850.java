@@ -11,19 +11,16 @@ public class P1850 {
         long A = Long.parseLong(st.nextToken());
         long B = Long.parseLong(st.nextToken());
 
-        while (A > 0 && B > 0) {
-            if (A >= B) {
-                A = A % B;
-            } else {
-                B = B % A;
-            }
-        }
-
-        for (int i = 0; i < Math.max(A, B); i++) {
+        for (int i = 0; i < gcd(A, B); i++) {
             bw.write("1");
         }
 
         bw.flush();
         bw.close();
+    }
+
+    static long gcd(long a, long b) {
+        if (b == 0) return a;
+        else return gcd(b, a % b);
     }
 }
