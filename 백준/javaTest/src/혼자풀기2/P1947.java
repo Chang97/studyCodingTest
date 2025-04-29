@@ -1,6 +1,5 @@
 package 혼자풀기2;
 
-import java.util.*;
 import java.io.*;
 
 public class P1947 {
@@ -11,7 +10,8 @@ public class P1947 {
         long mod = 1000000000;
         long[] D = new long[N + 1];
         D[1] = 0;
-        D[2] = 1;
+        if (N > 1) D[2] = 1;
+        
         for (int i = 3; i <= N; i++) {
             D[i] = (i - 1) * (D[i - 2] + D[i - 1]) % mod;
         }
